@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import Home from './pages/Home';
 import Favorites from './pages/Favorites';
-import Orders from './pages/Orders';
+import Main from './pages/Main';
 
 
 import AppContext from './context';
@@ -115,11 +115,17 @@ function App() {
           onRemove={onRemoveItem}
           opened={cartOpened}
         />
-      <Header 
-          onClickCart = {() => setCartOpened(true) }/>
+      <Header/>
+          {/* onClickCart = {() => setCartOpened(true) }/> */}
 
       <Routes>
-        <Route path="" element = {
+      <Route path='/' element = {
+          <>
+          <Main/>
+          </>
+          
+        }/>
+        <Route path="/homeTwo" element = {
           <Home
           items={items}
           cartItems={cartItems}
@@ -132,7 +138,7 @@ function App() {
         />
         }/>
 
-      <Route path = "/" element = {
+      <Route path = "/home" element = {
       <Home 
           items={items} 
           cartItems = {cartItems}
@@ -145,14 +151,14 @@ function App() {
           isLoading = {isLoading}
       />
       }/>
-
+  
       <Route path='/favorites' element = {
           <Favorites items={favorites} onAddToFavorite={onAddToFavorite}/>
       }/>
 
-      <Route path='/orders' element = {
-          <Orders/>
-      }/>
+      {/* <Route path='/main' element = {
+          <Main/>
+      }/> */}
       
       </Routes>
     </div>

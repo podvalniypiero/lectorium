@@ -10,12 +10,21 @@ function Header(props) {
     <header className="d-flex justify-between align-center p-40">
       <Link to="/">
         <div className="d-flex align-center">
-          <img width={40} height={40} src="img/logo.jpg" alt="Logotype" />
+          <img width={40} height={40} src="img/logotype.svg" alt="Logotype" />
           <div>
-            <h3 className="text-uppercase">React Lectorium</h3>
-            <p className="opacity-5">Магазин лучших кроссовок</p>
+          <h3 className="text-uppercase">ЛЕКТОРИЙ</h3>
+        <p className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
+        
+        
+        <nav>
+                 <button>О НАС</button>
+                 <button>НАША КОЛЛЕКЦИЯ</button>
+                 <button>РАЗДЕЛ ИНТЕРАКТИВА</button>
+                 <button>ИЗБРАННОЕ</button>
+        </nav>
           </div>
         </div>
+        
       </Link>
       <ul className="d-flex">
         <li onClick={props.onClickCart} className="mr-30 cu-p">
