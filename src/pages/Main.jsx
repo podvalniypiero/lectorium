@@ -3,6 +3,9 @@ import axios from 'axios';
 
 import Card from '../components/Card';
 import AppContext from '../context';
+import styles from '../index.scss'; 
+
+
 
 function Main() {
   
@@ -12,12 +15,15 @@ function Main() {
   return (
           
     <div className = 'pos-r w100p mt-180'>
-    <div className='d-flex flex-row justify-center align-center p-20'>
-    <p className='align-center p-30'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
+    <div className='d-flex flex-row p-20'>
+      <div className={styles.grey}>
+      <p className=' p-30'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
       <br/>ВАШ НАВИГАТОР В МИРЕ ЛИТЕРАТУРЫ
       <br/>ИНСТРУМЕНТ ПОЗНАНИЯ ИСКУССТВА СЛОВА И САМОГО СЕБЯ
     </p>
-    <img src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
+    <img className= '' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
+      </div>
+   
   </div> 
   <div className='w100p pos-r mt-30px'>
       <div className='paddingAbout'>
@@ -36,9 +42,9 @@ function Main() {
       
       
       <div className='d-flex flex-row justify-center'>
-        <img className='p-25' src='\img\slider\backArrow.svg' alt='Назад'/>
-        <img className='p-25' src='\img\slider\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
-        <img className='p-25' src='\img\slider\nextArrow.svg' alt='Вперед'/>
+        <img className='p-25' src='\img\backArrow.svg' alt='Назад'/>
+        <img className='p-25' src='\img\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
+        <img className='p-25' src='\img\nextArrow.svg' alt='Вперед'/>
       </div>
 
       <div className='d-flex flex-column align-center'>
