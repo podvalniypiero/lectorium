@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import Card from '../components/Card';
@@ -23,8 +24,7 @@ function Main() {
       <br/>ВАШ НАВИГАТОР В МИРЕ ЛИТЕРАТУРЫ
       <br/>ИНСТРУМЕНТ ПОЗНАНИЯ ИСКУССТВА СЛОВА И САМОГО СЕБЯ
     </p>
-    
-      </div>
+    </div>
    
   </div> 
   <div className='w100p pos-r mt-30px'>
@@ -57,12 +57,60 @@ function Main() {
           <br/>ЛЕКТОРИЙ ПОМОГАЕТ
         </p>
         <img className='p-20' src='\img\main2.jpg' alt='Помощь' width={330}/>
+
         <div className= 'p-35 w70p'>
-          <h3 className='d-flex justify-center p-20'>ПОЧЕМУ ЛЕКТОРИУМ?</h3>
+          <div className={styles.listMain}>
+            <h3 className='d-flex justify-center p-15 '>ПОЧЕМУ ЛЕКТОРИУМ?</h3>
+              <ul className=' mt-30'>
+                <li className=''>
+                  <img className='' src='\img\age.svg' alt='icon'/>
+                  <p>РЕКОММЕНДУЕМЫЙ ВОЗРАСТ ДЛЯ ПОСЛЬЗОВАНИЯ ПОРТАЛОМ: С 5 КЛАССА ОБЩЕОБРАЗОВАТЕЛЬНОЙ ШКОЛЫ </p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\profileCard.svg' alt='icon'/>
+                  <p>У НАС ПОКА НЕТ ЛИЧНОГО КАБИНЕТА, НО ЕСТЬ ВОЗМОЖНОСТЬ ДЕЛАТЬ ЗАКЛАДКИ</p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\test.svg' alt='icon'/>
+                  <p>ИНТЕРАКТИВНЫЙ РАЗДЕЛ СОДЕРЖИТ ТЕСТЫ </p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\chat.svg' alt='icon'/>
+                  <p>МЫ ВНИМАТЕЛЬНО ОТНОСИМСЯ К ОТЗЫВАМ И ПРЕДЛОЖЕНИЯМ</p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\dom.svg' alt='icon'/>
+                  <p>ДЛЯ ПОЛЬЗОВАНИЯ ПОРТАЛОМ НЕОБХОДИМ ТОЛЬКО ИНТЕРНЕТ</p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\vocabulary.svg' alt='icon'/>
+                  <p>ЛИТЕРАТУРНЫЙ СЛОВАРЬ СОДЕРЖИТ КАРТОЧКИ, КОТОРЫЕ ТАКЖЕ УДОБНО ДОБАВЛЯТЬ В ИЗБРАННОЕ И УДАЛЯТЬ ПО МЕРЕ ЗАПОМИНАНИЯ</p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\phone.svg' alt='icon'/>
+                  <p>ПОРТАЛ АДАПТИРОВАН ПОД МОБИЛЬНЫЕ УСТРОЙСТВА</p>
+                </li>
+                <li className=''>
+                  <img className='' src='\img\renew.svg' alt='icon'/>
+                  <p>МЫ РЕГУЛЯРНО ОБНОВЛЯЕМ НАШИ РАЗДЕЛЫ</p>
+                </li>
+
+              </ul>
         </div>
+
       </div>
       
      </div>
+    </div>
+        <div className=''>
+          <div className= {styles.authorsMain}>
+            <h3> НАША КОЛЛЕКЦИЯ АВТОРОВ</h3>
+            <Link to="/authors">
+              <button className="p-20 cu-p d-flex ">СМОТРЕТЬ ПОЛНУЮ КОЛЛЕКЦИЮ АВТОРОВ</button>
+            </Link>
+            
+          </div>
+        </div>
     </div>
     </div>
     </div>

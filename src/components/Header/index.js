@@ -20,23 +20,25 @@ function Header(props) {
         
         <nav className='d-flex mt-10 flex-row justify-around flex-wrap'>
           <div className=''>
+          <Link to="/">
+            <button className="mr-30 p-15 m-5">О НАС</button>
+          </Link>
+
+          <Link to="/authors">
+            <button className="mr-30 p-15 m-5">НАША КОЛЛЕКЦИЯ АВТОРОВ</button>
+          </Link>
+                 
+          <Link to="/games">
+             <button className="mr-30 p-15 m-5">РАЗДЕЛ ИНТЕРАКТИВА</button>
+          </Link>
+          
           <Link to="/favorites">
             <button className="mr-30 p-15 m-5">ИЗБРАННОЕ 
             <img className='ml-5 mr-0' width={13} height={13} src="img/heart.svg" alt="Закладки" />
             </button>
           </Link>
        
-          <Link to="/">
-            <button className="mr-30 p-15 m-5">О НАС</button>
-          </Link>
-
-          <Link to="/">
-            <button className="mr-30 p-15 m-5">НАША КОЛЛЕКЦИЯ</button>
-          </Link>
-                 
-          <Link to="/games">
-             <button className="mr-30 p-15 m-5">РАЗДЕЛ ИНТЕРАКТИВА</button>
-          </Link>
+        
           </div>
       
         </nav>

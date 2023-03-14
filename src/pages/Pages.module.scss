@@ -11,3 +11,40 @@
     height: auto;
     color: whitesmoke;
 }
+
+.listMain{
+    width: 60vw;
+    background: #d6d6d6;
+    color: black;
+    padding: 6vw;
+    border-radius: 45px;
+    margin-bottom: 30px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        li{
+            flex-direction: row;
+            img{
+                width: 60px;
+
+            }
+            p{
+               
+            }
+        }
+    }
+}
+
+.authorsMain{
+    h3{
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+    }
+    button{
+        padding: 10px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
