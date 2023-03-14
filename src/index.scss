@@ -10,10 +10,9 @@ $fontH: 'Roboto Condensed', sans-serif;
 $font-main: 16px;
 $font-par:14px;
 
+
 body {
   margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #e7f6ff;
 }
 
@@ -28,6 +27,7 @@ body {
   max-width: 1080px;
   margin: 50px auto;
 }
+
 
 header {
   border-bottom: 1px solid #eaeaea;
