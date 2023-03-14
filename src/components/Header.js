@@ -17,10 +17,22 @@ function Header(props) {
         
         
         <nav>
-                 <button>О НАС</button>
-                 <button>НАША КОЛЛЕКЦИЯ</button>
-                 <button>РАЗДЕЛ ИНТЕРАКТИВА</button>
-                 <button>ИЗБРАННОЕ</button>
+          <Link to="/favorites">
+            <button>ИЗБРАННОЕ</button>
+          </Link>
+       
+          <Link to="/">
+            <button>О НАС</button>
+          </Link>
+          
+          <Link to="/">
+            <button>НАША КОЛЛЕКЦИЯ</button>
+          </Link>
+                 
+          <Link to="/games">
+             <button>РАЗДЕЛ ИНТЕРАКТИВА</button>
+          </Link>
+                 
         </nav>
           </div>
         </div>

@@ -36,9 +36,9 @@ function Main() {
               
               
               <div className='slider'>
-                <img src='\img\slider\backArrow.svg' alt='Назад'/>
-                <img src='\img\slider\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
-                <img src='\img\slider\nextArrow.svg' alt='Вперед'/>
+                <img src='\img\backArrow.svg' alt='Назад'/>
+                <img src='\img\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
+                <img src='\img\nextArrow.svg' alt='Вперед'/>
               </div>
 
               <div className='aboutPhoto'>
