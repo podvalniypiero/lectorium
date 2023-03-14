@@ -7,3 +7,19 @@ button{
 body{
     
 }
+.headerTop{
+    display: flex;
+    align-items: center;
+    cursor: default;
+    button {
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    button:hover{
+        background: lightgoldenrodyellow;
+    }
+    nav{
+        display: flex;
+       
+    }
+}
