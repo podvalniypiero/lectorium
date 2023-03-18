@@ -5,9 +5,10 @@ import Drawer from './components/Drawer';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 
-import Home from './pages/Home';
+import Person from './pages/Person';
 import Favorites from './pages/Favorites';
 import Main from './pages/Main';
+import Vocabulary from './pages/Vocabulary';
 
 
 import AppContext from './context';
@@ -125,8 +126,8 @@ function App() {
           </>
           
         }/>
-        <Route path="/homeTwo" element = {
-          <Home
+        <Route path="/authors" element = {
+          <Person
           items={items}
           cartItems={cartItems}
           searchValue={searchValue}
@@ -138,28 +139,22 @@ function App() {
         />
         }/>
 
-      <Route path = "/home" element = {
-      <Home 
-          items={items} 
-          cartItems = {cartItems}
-          searchValue={searchValue} 
-          setSearchValue={setSearchValue} 
-          onChangeSearchInput={onChangeSearchInput} 
+        <Route path="/vocabulary" element = {
+          <Vocabulary
+          items={items}
+          cartItems={cartItems}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          onChangeSearchInput={onChangeSearchInput}
           onAddToFavorite={onAddToFavorite}
           onAddToCart={onAddToCart}
-          // isLoading = {!items.length}
-          isLoading = {isLoading}
-      />
-      }/>
+          isLoading={isLoading}
+        />
+        }/>
   
       <Route path='/favorites' element = {
           <Favorites items={favorites} onAddToFavorite={onAddToFavorite}/>
       }/>
-
-      {/* <Route path='/main' element = {
-          <Main/>
-      }/> */}
-      
       </Routes>
     </div>
     </AppContext.Provider>
