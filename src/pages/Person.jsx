@@ -7,18 +7,18 @@ function Person({
   setSearchValue,
   onChangeSearchInput,
   onAddToFavorite,
-  onAddToCart,
+  // onAddToCart,
   isLoading,
 }) {
   const renderItems = () => {
-    const filtredItems = items.filter((item) =>
+    let filtredItems = items.filter((item) =>
       item.title.toString().toLowerCase().includes(searchValue.toString().toLowerCase()),
     );
     return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
       <Card
         key={index}
         onFavorite={(obj) => onAddToFavorite(obj)}
-        onPlus={(obj) => onAddToCart(obj)}
+        // onPlus={(obj) => onAddToCart(obj)}
         loading={isLoading}
         {...item}
       />

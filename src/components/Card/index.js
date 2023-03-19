@@ -5,21 +5,21 @@ import AppContext from '../../context';
 
 function Card({
   id,
-  title,
+  name,
+  data,
   imageURL,
-  price,
   onFavorite,
-  onPlus,
+  // onPlus,
   favorited = false,
   loading = false,
 }) {
   const { isItemAdded } = React.useContext(AppContext);
   const [isFavorite, setIsFavorite] = React.useState(favorited);
-  const obj = { id, parentId: id, title, imageURL, price };
+  const obj = { id, parentId: id, name, data, imageURL };
 
-  const onClickPlus = () => {
-    onPlus(obj);
-  };
+  // const onClickPlus = () => {
+  //   onPlus(obj);
+  // };
 
   const onClickFavorite = () => {
     onFavorite(obj);
@@ -50,20 +50,20 @@ function Card({
             </div>
           )}
           <img width="100%" height={135} src={imageURL} alt="Sneakers" />
-          <h5>{title}</h5>
+          <h5>{name}</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column">
-              <span>Цена:</span>
-              <b>{price} руб.</b>
+              <span>Годы жизни:</span>
+              <b>{data}</b>
             </div>
-            {onPlus && (
+            {/* {onPlus && (
               <img
                 className={styles.plus}
                 onClick={onClickPlus}
                 src={isItemAdded(id) ? 'img/btn-checked.svg' : 'img/btn-plus.svg'}
                 alt="Plus"
               />
-            )}
+            )} */}
           </div>
         </>
       )}

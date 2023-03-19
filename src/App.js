@@ -37,6 +37,7 @@ function App() {
     // setCartItems(cartResponse.data);
     setFavorites(favoritesResponse.data);
     console.log (itemsResponse.data);
+    console.log (favoritesResponse.data);
     setItems(itemsResponse.data);
     }
       fetchData();

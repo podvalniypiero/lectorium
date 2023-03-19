@@ -6,8 +6,7 @@ function Header(props) {
  
 
   return (
-    <header className="d-flex justify-between align-center p-40">
-      <Link to="/">
+  <header className="d-flex justify-between align-center p-40">
         <div className={styles.headerTop}>
           <img width={55} height={55} src="img/logotype.svg" alt="Logotype" className='mr-30' />
         <div>
@@ -16,7 +15,7 @@ function Header(props) {
         <p className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
         </div>
         
-        <nav className='d-flex mt-10 flex-row justify-around flex-wrap'>
+        <div className='d-flex mt-10 flex-row justify-around flex-wrap'>
           <div className=''>
           <Link to="/">
             <button className="mr-30 p-15 m-5">О НАС</button>
@@ -40,13 +39,11 @@ function Header(props) {
             </button>
           </Link>
             </div>
-        </nav>
+        </div>
           </div>
             </div>
-        
-      </Link>
     
-    </header>
+  </header>
   );
 }
 

@@ -7,7 +7,7 @@ function Vocabulary({
   setSearchValue,
   onChangeSearchInput,
   onAddToFavorite,
-  onAddToCart,
+  // onAddToCart,
   isLoading,
 }) {
   const renderItems = () => {
@@ -18,7 +18,7 @@ function Vocabulary({
       <Card
         key={index}
         onFavorite={(obj) => onAddToFavorite(obj)}
-        onPlus={(obj) => onAddToCart(obj)}
+        // onPlus={(obj) => onAddToCart(obj)}
         loading={isLoading}
         {...item}
       />

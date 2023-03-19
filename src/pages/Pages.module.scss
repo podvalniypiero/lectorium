@@ -1,5 +1,17 @@
 @import 'macro-css';
 
+.mainIntro{
+    
+   img{
+    margin: auto;
+   }
+   p{
+    text-align: center;
+    height: auto;
+    width: 30wv;
+   }
+}
+
 .containerMain{
     background: white;
     height: auto;
@@ -47,4 +59,15 @@
         display: flex;
         justify-content: center;
     }
+}
+.sliderMain{
+
+}
+
+@media all and (max-width:500px){
+.sliderMain{
+    .next{
+        
+    }
+}
 }
