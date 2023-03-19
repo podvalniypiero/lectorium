@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { useCart } from '../../hooks/useCart';
 import styles from './Header.module.scss';
 
 function Header(props) {
@@ -27,6 +25,10 @@ function Header(props) {
           <Link to="/authors">
             <button className="mr-30 p-15 m-5">НАША КОЛЛЕКЦИЯ АВТОРОВ</button>
           </Link>
+
+          <Link to="/vocabulary">
+            <button className="mr-30 p-15 m-5">ЛИТЕРАТУРНЫЙ СЛОВАРЬ</button>
+          </Link>
                  
           <Link to="/games">
              <button className="mr-30 p-15 m-5">РАЗДЕЛ ИНТЕРАКТИВА</button>
@@ -37,13 +39,10 @@ function Header(props) {
             <img className='ml-5 mr-0' width={13} height={13} src="img/heart.svg" alt="Закладки" />
             </button>
           </Link>
-       
-        
-          </div>
-      
+            </div>
         </nav>
           </div>
-        </div>
+            </div>
         
       </Link>
     
