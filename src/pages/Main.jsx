@@ -16,7 +16,7 @@ function Main() {
     <div className={styles.containerMain}>
 
     <div className='d-flex flex-column align-center'>
-      <div className='mainIntro '>
+      <div className={styles.mainIntro}>
       <img className= 'mt-20' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
       <p className=' p-30'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
       <br/>ВАШ НАВИГАТОР В МИРЕ ЛИТЕРАТУРЫ
@@ -26,7 +26,7 @@ function Main() {
     </div>
    
   </div> 
-  <div className='sliderMain w100p pos-r mt-30px'>
+  <div className={styles.sliderMain}>
       <div className= {styles.containerMainDark}>
       <div className='d-flex flex-row justify-around '>
         <p className='mt-20'>ЛЕКТОРИЙ</p>
@@ -43,9 +43,9 @@ function Main() {
       
       
       <div className='d-flex flex-row justify-center'>
-        <img className=' previous p-25 cu-p' src={'\img\backArrow.svg'} alt='Назад'/>
+        <img className={styles.previous} src='\img\backArrow.svg' alt='Назад'/>
         <img className='p-25' src='\img\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
-        <img className=' next p-25 cu-p' src='\img\nextArrow.svg' alt='Вперед'/>
+        <img className={styles.next} src='\img\nextArrow.svg' alt='Вперед'/>
       </div>
 
       <div className='d-flex flex-column align-center'>
@@ -60,9 +60,9 @@ function Main() {
         <div className= 'p-35 w70p'>
           <div className={styles.listMain}>
             <h3 className='d-flex justify-center p-15 '>ПОЧЕМУ ЛЕКТОРИУМ?</h3>
-              <ul className=' mt-30'>
-                <li className=''>
-                  <img className='' src='\img\age.svg' alt='icon'/>
+              <ul className={styles.ulListMain}>
+                <li className={styles.liListMain}>
+                  <img className='mr-20' src='\img\age.svg' alt='icon'/>
                   <p>РЕКОММЕНДУЕМЫЙ ВОЗРАСТ ДЛЯ ПОСЛЬЗОВАНИЯ ПОРТАЛОМ: С 5 КЛАССА ОБЩЕОБРАЗОВАТЕЛЬНОЙ ШКОЛЫ </p>
                 </li>
                 <li className=''>
@@ -103,13 +103,49 @@ function Main() {
     </div>
         <div className=''>
           <div className= {styles.authorsMain}>
-            <h3> НАША КОЛЛЕКЦИЯ АВТОРОВ</h3>
+            <h3 className='d-flex justify-center p-15 mb-50'> НАША КОЛЛЕКЦИЯ АВТОРОВ</h3>
+            <div className='d-flex justify-center'>
+            <ul className=''>
+              <li><img src= '\img\li1.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li2.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li3.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li4.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li5.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li6.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li7.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li8.jpg' alt='Authors Collection'/> </li>
+              <li><img src= '\img\li9.jpg' alt='Authors Collection'/> </li>
+            </ul>
+            </div>
+            
             <Link to="/authors">
-              <button className="p-20 cu-p m-20">СМОТРЕТЬ ПОЛНУЮ КОЛЛЕКЦИЮ АВТОРОВ</button>
+              <div className='d-flex justify-center '>
+              <button className='cu-p'>СМОТРЕТЬ ПОЛНУЮ КОЛЛЕКЦИЮ АВТОРОВ</button>
+              </div> 
             </Link>
+
             
           </div>
         </div>
+    </div>
+        <div className={styles.containerMainDark}>
+        <div className='d-flex flex-column align-center'>
+      <div className={styles.mainIntro}>
+      <p className=' p-30'>ЛИТЕРАТУРА — ЭТО НЕ ТОЛЬКО ИСКУССТВО, ЭТО ФИЛОСОФИЯ</p>
+      <img className= 'mt-20 mb-40' src='\img\final.jpg' alt='Philosophy' width={650}/>
+      <p className=''>ЛЕКТОРИЙ — ЭТО НОВЫЙ ВЗГЛЯД НА ЛИТЕРАТУРУ</p>
+      <p className=''>ВАШ ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
+      <Link to="/authors">
+              <div className='d-flex justify-center '>
+              <button className='cu-p'>ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ</button>
+              </div> 
+            </Link>
+      
+    
+          
+          
+        </div>
+    </div>
     </div>
     </div>
     </div>

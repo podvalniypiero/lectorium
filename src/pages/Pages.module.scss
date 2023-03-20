@@ -1,7 +1,9 @@
 @import 'macro-css';
 
 .mainIntro{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
    img{
     margin: auto;
    }
@@ -10,6 +12,17 @@
     height: auto;
     width: 30wv;
    }
+   button{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 30px;
+    &:hover{
+        background: lightgoldenrodyellow;
+       }
+   }
+ 
 }
 
 .containerMain{
@@ -54,20 +67,49 @@
         font-weight: 600;
     }
     button{
-        padding: 10px;
-        border-radius: 25px;
         display: flex;
         justify-content: center;
+        padding: 20px;
+        border-radius: 25px;
+        margin: 30px;
+        &:hover{
+            background: lightgoldenrodyellow;
+           }
+    }
+    img{
+        width: 12vw;
+        cursor: pointer;
+    }
+    ul{ 
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2vh;
+        column-gap: 4vw;
+       
+    }
+
+
+}
+.sliderMain{
+  
+}
+
+.ulListMain{
+    li{
+        display: grid;
+        grid-template-columns: 100px auto ;
+        column-gap: 3wv;
+        margin-bottom: 3vh;
     }
 }
-.sliderMain{
+.liListMain{
 
 }
-
 @media all and (max-width:500px){
 .sliderMain{
-    .next{
-        
+    .next,.previous{
+        display: none;
     }
 }
 }
