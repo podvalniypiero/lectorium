@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import AppContext from '../context';
 import styles from './Pages.module.scss'; 
+import Btn from '../components/Btn';
 
 
 
@@ -120,7 +121,7 @@ function Main() {
             
             <Link to="/authors">
               <div className='d-flex justify-center '>
-              <button className='cu-p'>СМОТРЕТЬ ПОЛНУЮ КОЛЛЕКЦИЮ АВТОРОВ</button>
+              <Btn p={'СМОТРЕТЬ ПОЛНУЮ КОЛЛЕКЦИЮ АВТОРОВ'}/>
               </div> 
             </Link>
 
@@ -136,14 +137,14 @@ function Main() {
       <p className=''>ЛЕКТОРИЙ — ЭТО НОВЫЙ ВЗГЛЯД НА ЛИТЕРАТУРУ</p>
       <p className=''>ВАШ ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
       <Link to="/authors">
-              <div className='d-flex justify-center '>
+              {/* <div className='d-flex justify-center '>
               <button className='cu-p'>ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ</button>
-              </div> 
-            </Link>
-      
-    
-          
-          
+              </div>  */}
+              <div className='d-flex justify-center'>
+              <Btn p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
+              </div>
+              
+      </Link>
         </div>
     </div>
     </div>
