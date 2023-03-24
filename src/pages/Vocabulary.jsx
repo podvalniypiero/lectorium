@@ -12,7 +12,7 @@ function Vocabulary({
 }) {
   const renderItems = () => {
     const filtredItems = items.filter((item) =>
-      item.title.toString().toLowerCase().includes(searchValue.toString().toLowerCase()),
+      (String(item.title)).toLowerCase().includes(String(searchValue).toLowerCase()),
     );
     return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
       <Card
@@ -28,10 +28,10 @@ function Vocabulary({
   return (
     <div className="content p-40">
       <div className="d-flex align-center justify-between mb-40">
-        <h1>{searchValue.toString().length === 0 ? `Все карточки`: `Поиск по запросу: "${searchValue}"`}</h1>
+        <h1>{String(searchValue).length === 0 ? `Все карточки`: `Поиск по запросу: "${searchValue}"`}</h1>
         <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
-          {searchValue.toString().length !== 0 && <img
+          {String(searchValue).length !== 0 && <img
               onClick={() => setSearchValue('')}
               className="clear cu-p"
               src="img/btn-remove.svg"

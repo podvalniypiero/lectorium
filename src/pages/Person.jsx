@@ -11,8 +11,8 @@ function Person({
   isLoading,
 }) {
   const renderItems = () => {
-    let filtredItems = items.filter((item) =>
-      item.title.toString().toLowerCase().includes(searchValue.toString().toLowerCase()),
+    const filtredItems = items.filter((item) =>
+      (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
     );
     return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
       <Card

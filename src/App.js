@@ -20,6 +20,7 @@ function App() {
   // const [cartItems, setCartItems] = React.useState([]); 
   // const [cartOpened , setCartOpened] = React.useState(false);
   const [favorites, setFavorites] = React.useState([]);
+  const [vocabulary, setVocabulary] = React.useState([]);
 
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -31,6 +32,7 @@ function App() {
     // const cartResponse = await axios.get(`https://63760f70b5f0e1eb85017e9f.mockapi.io/cart`);
     const favoritesResponse = await axios.get(`http://localhost:2023/favorites`);
     const itemsResponse =  await axios.get(`http://localhost:2023/person`);
+    const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
 
     setIsLoading(false);
    
@@ -38,7 +40,9 @@ function App() {
     setFavorites(favoritesResponse.data);
     console.log (itemsResponse.data);
     console.log (favoritesResponse.data);
+    console.log(vocabularyResponse.data);
     setItems(itemsResponse.data);
+    setVocabulary(vocabularyResponse.data);
     }
       fetchData();
 
@@ -73,7 +77,7 @@ function App() {
       setFavorites((prev) => prev.filter((item) => item.id !== obj.id));
     }
     else {
-    const {data} = await  axios.post(`http://localhost:2023/favorites`, obj); 
+    const {data} = await axios.post(`http://localhost:2023/favorites`, obj); 
     setFavorites(prev => [...prev, data]);
     }
   }
@@ -94,6 +98,7 @@ function App() {
         items,
         // cartItems,
         favorites,
+        vocabulary,
         // isItemAdded,
         onAddToFavorite,
         // onAddToCart,
