@@ -2,6 +2,7 @@ import styles from './Card.module.scss';
 import ContentLoader from 'react-content-loader';
 import React from 'react';
 import AppContext from '../../context';
+import { InView, useInView } from 'react-intersection-observer';
 
 function Card({
   id,
@@ -9,22 +10,21 @@ function Card({
   data,
   imageURL,
   onFavorite,
-  // onPlus,
   favorited = false,
   loading = false,
 }) {
-  const { isItemAdded } = React.useContext(AppContext);
+  // const { isItemAdded } = React.useContext(AppContext);
   const [isFavorite, setIsFavorite] = React.useState(favorited);
   const obj = { id, parentId: id, name, data, imageURL };
-
-  // const onClickPlus = () => {
-  //   onPlus(obj);
-  // };
 
   const onClickFavorite = () => {
     onFavorite(obj);
     setIsFavorite(!isFavorite);
   };
+
+  // const {ref, InView} = useInView ({
+  //   threshold: 0.5,
+  // })
 
   return (
     <div className={styles.card}>
@@ -49,21 +49,18 @@ function Card({
               <img className={styles.isLiked} src={isFavorite ? 'img/liked.svg' : 'img/toLike.jpg'} alt="Unliked" />
             </div>
           )}
-          <img width="100%" height={135} src={imageURL} alt="Sneakers" />
+          {/* <div ref={ref} className={styles.image}>
+            {
+              InView ? <img width="100%" height={135} src={imageURL} alt="Портрет" /> : <img className={styles.skeleton} width="100%" height={135} />
+            }
+          </div> */}
+          <img width="100%" height={135} src={imageURL} alt="Портрет" />
           <h5>{name}</h5>
           <div className="d-flex justify-between align-center">
             <div className="d-flex flex-column">
               <span>Годы жизни:</span>
               <b>{data}</b>
             </div>
-            {/* {onPlus && (
-              <img
-                className={styles.plus}
-                onClick={onClickPlus}
-                src={isItemAdded(id) ? 'img/btn-checked.svg' : 'img/btn-plus.svg'}
-                alt="Plus"
-              />
-            )} */}
           </div>
         </>
       )}

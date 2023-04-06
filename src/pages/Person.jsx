@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import styles from './Pages.module.scss'; 
+import { InView } from 'react-intersection-observer';
 
 function Person({
   items,
@@ -8,7 +9,6 @@ function Person({
   setSearchValue,
   onChangeSearchInput,
   onAddToFavorite,
-  // onAddToCart,
   isLoading,
 }) {
   const renderItems = () => {
@@ -19,7 +19,6 @@ function Person({
       <Card
         key={index}
         onFavorite={(obj) => onAddToFavorite(obj)}
-        // onPlus={(obj) => onAddToCart(obj)}
         loading={isLoading}
         {...item}
       />

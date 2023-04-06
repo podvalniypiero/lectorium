@@ -54,5 +54,11 @@
   img{
     object-fit: contain;
   }
+  .skeleton{
+    background-color: $grey;
+    border: none;
+    border-radius: 15px;
+   
+  }
   }
   
