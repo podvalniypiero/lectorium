@@ -36,9 +36,9 @@ function App() {
     setIsLoading(false);
 
     setFavorites(favoritesResponse.data);
-    console.log (itemsResponse.data);
-    console.log (favoritesResponse.data);
-    console.log(vocabularyResponse.data);
+    // console.log (itemsResponse.data);
+    // console.log (favoritesResponse.data);
+    // console.log(vocabularyResponse.data);
     setItems(itemsResponse.data);
     setVocabulary(vocabularyResponse.data);
     }
