@@ -28,7 +28,7 @@ function Vocabulary({
   return (
     <div className="content p-40">
       <div className="d-flex align-center justify-between mb-40">
-        <h1>{String(searchValue).length === 0 ? `Словарь Лектория`: `Поиск по запросу: "${searchValue}"`}</h1>
+        <h1>Словарь Лектория</h1>
         {/* <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {String(searchValue).length !== 0 && <img
