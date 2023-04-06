@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../components/Card';
+import styles from './Pages.module.scss'; 
 
 function Person({
   items,
@@ -27,8 +28,10 @@ function Person({
 
   return (
     <div className="content p-40">
-      <div className="d-flex align-center justify-between mb-40">
-        <h1>{searchValue.toString().length === 0 ? `Все авторы`: `Поиск по запросу: "${searchValue}"`}</h1>
+      <div className={styles.searchBox}>
+        <h1 className={styles.searchInput}>
+          {searchValue.toString().length === 0 ? `Все авторы`: `Поиск по запросу: "${searchValue}"`}
+        </h1>
         <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {searchValue.toString().length !== 0 && <img
@@ -41,7 +44,7 @@ function Person({
           <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
         </div>
       </div>
-      <div className="d-flex flex-wrap">{renderItems()}</div>
+      <div className="d-flex justify-center flex-wrap mb-60">{renderItems()}</div>
     </div>
   );
 }

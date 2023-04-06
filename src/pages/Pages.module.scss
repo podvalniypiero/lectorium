@@ -26,6 +26,8 @@
 }
 
 .containerMain{
+    width: 100%;
+    margin: 0;
     background: white;
     height: auto;
     margin-top: 15px;
@@ -36,7 +38,14 @@
     height: auto;
     color: whitesmoke;
 }
-
+.sliderMainContainer{
+    display: flex;
+    flex-flow:row;
+    justify-content: center;
+    img{
+        width: 300px;
+    }
+}
 .listMain{
     width: 60vw;
     background: #d6d6d6;
@@ -61,6 +70,7 @@
 }
 
 .authorsMain{
+    width: 100%;
     h3{
         display: flex;
         justify-content: center;
@@ -86,15 +96,8 @@
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 2vh;
         column-gap: 4vw;
-       
     }
-
-
 }
-.sliderMain{
-  
-}
-
 .ulListMain{
     li{
         display: grid;
@@ -103,13 +106,76 @@
         margin-bottom: 3vh;
     }
 }
-.liListMain{
+
+.searchBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-right: 30px;
+    
+}
+
+
+@media all and (max-width:850px){
 
 }
-@media all and (max-width:500px){
+@media all and (max-width:600px){
 .sliderMain{
     .next,.previous{
         display: none;
     }
 }
+.authorsMain, .listMain{
+    h3{
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.authorsMain{
+    .authorsMainUl{
+        img{
+            width: 70px;
+        }
+    }
+}
+.ulListMain{
+    li{
+        display: grid;
+        grid-template-columns: 60px auto ;
+        column-gap: 10px;
+        margin-bottom: 10px;
+        p{
+            font-size: 12px;
+        }
+    }
+}
+.listMain{
+    width: 90vw;
+    ul{
+        li{
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+.mainIntro{
+    img{
+        width: 300px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+.searchBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    h1{
+        margin-bottom: 40px;
+    }
+}
+
 }

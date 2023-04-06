@@ -107,13 +107,6 @@
       "name": "Достоевский Фёдор Михайлович",
       "data": "1821—1881",
       "imageURL": "/img/person/8.jpg"
-    },
-    {
-      "id": 1,
-      "parentId": 1,
-      "name": "Лермонтов Михаил Юрьевич",
-      "data": "1814—1841",
-      "imageURL": "/img/person/1.jpg"
     }
   ]
 }

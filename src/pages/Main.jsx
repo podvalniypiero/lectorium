@@ -13,7 +13,7 @@ function Main() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   return (
-    <div className = 'w100p'>   
+    
     <div className={styles.containerMain}>
 
     <div className='d-flex flex-column align-center'>
@@ -30,9 +30,9 @@ function Main() {
   <div className={styles.sliderMain}>
       <div className= {styles.containerMainDark}>
       <div className='d-flex flex-row justify-around '>
-        <p className='mt-20'>ЛЕКТОРИЙ</p>
-        <p className='mt-20'>ЛЮБИМЫЙ</p>
-        <p className='mt-20'>ЛИТЕРАТУРНЫЙ</p>
+        <p className=''>ЛЕКТОРИЙ</p>
+        <p className=''>ЛЮБИМЫЙ</p>
+        <p className=''>ЛИТЕРАТУРНЫЙ</p>
       </div>
         
       <div className='d-flex flex-column align-center'>
@@ -43,7 +43,7 @@ function Main() {
       </div>
       
       
-      <div className='d-flex flex-row justify-center'>
+      <div className={styles.sliderMainContainer}>
         <img className={styles.previous} src='\img\backArrow.svg' alt='Назад'/>
         <img className='p-25' src='\img\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
         <img className={styles.next} src='\img\nextArrow.svg' alt='Вперед'/>
@@ -58,7 +58,7 @@ function Main() {
         </p>
         <img className='p-20' src='\img\main2.jpg' alt='Помощь' width={330}/>
 
-        <div className= 'p-35 w70p'>
+        <div className= 'p-10 '>
           <div className={styles.listMain}>
             <h3 className='d-flex justify-center p-15 '>ПОЧЕМУ ЛЕКТОРИУМ?</h3>
               <ul className={styles.ulListMain}>
@@ -106,7 +106,7 @@ function Main() {
           <div className= {styles.authorsMain}>
             <h3 className='d-flex justify-center p-15 mb-50'> НАША КОЛЛЕКЦИЯ АВТОРОВ</h3>
             <div className='d-flex justify-center'>
-            <ul className=''>
+            <ul className={styles.authorsMainUl}>
               <li><img src= '\img\li1.jpg' alt='Authors Collection'/> </li>
               <li><img src= '\img\li2.jpg' alt='Authors Collection'/> </li>
               <li><img src= '\img\li3.jpg' alt='Authors Collection'/> </li>
@@ -137,21 +137,15 @@ function Main() {
       <p className=''>ЛЕКТОРИЙ — ЭТО НОВЫЙ ВЗГЛЯД НА ЛИТЕРАТУРУ</p>
       <p className=''>ВАШ ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
       <Link to="/authors">
-              {/* <div className='d-flex justify-center '>
-              <button className='cu-p'>ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ</button>
-              </div>  */}
-              <div className='d-flex justify-center'>
-              <Btn p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
-              </div>
-              
+        <div className='d-flex justify-center'>
+          <Btn p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
+        </div>
       </Link>
         </div>
     </div>
     </div>
     </div>
-    </div>
-    
-               
+           
   );
 }
 

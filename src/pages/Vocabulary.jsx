@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../components/Card';
+import styles from './Pages.module.scss'; 
 
 function Vocabulary({
   items,
