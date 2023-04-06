@@ -88,11 +88,32 @@
   ],
   "favorites": [
     {
-      "id": 2,
-      "parentId": 2,
-      "name": "Бродский Иосиф Александрович",
-      "data": "1940—1996",
-      "imageURL": "/img/person/2.jpg"
+      "id": 6,
+      "parentId": 6,
+      "name": "Пушкин Александр Сергеевич",
+      "data": "1799—1837",
+      "imageURL": "/img/person/6.jpg"
+    },
+    {
+      "id": 9,
+      "parentId": 9,
+      "name": "Гоголь Николай Васильевич",
+      "data": "1809—1852",
+      "imageURL": "/img/person/9.jpg"
+    },
+    {
+      "id": 8,
+      "parentId": 8,
+      "name": "Достоевский Фёдор Михайлович",
+      "data": "1821—1881",
+      "imageURL": "/img/person/8.jpg"
+    },
+    {
+      "id": 1,
+      "parentId": 1,
+      "name": "Лермонтов Михаил Юрьевич",
+      "data": "1814—1841",
+      "imageURL": "/img/person/1.jpg"
     }
   ]
 }

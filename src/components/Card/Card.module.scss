@@ -22,12 +22,18 @@
   }
   .button{
   background: white;
+  
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 10px;
   height: 32px;
   width: 32px;
   cursor: pointer;
+  }
+  .isLiked{
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 5px rgba(139, 139, 139, 0.25);
   }
   h5{
     font-weight: 400;
@@ -44,6 +50,9 @@
   }
   .plus{
     cursor: pointer;
+  }
+  img{
+    object-fit: contain;
   }
   }
   

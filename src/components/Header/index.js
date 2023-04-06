@@ -10,9 +10,13 @@ function Header(props) {
         <div className={styles.headerTop}>
           <img width={55} height={55} src="img/logotype.svg" alt="Logotype" className='mr-30' />
         <div>
-        <div>
-        <h3 className="text-uppercase">ЛЕКТОРИЙ</h3>
-        <p className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
+
+        <div className='cu-p'>
+          <Link to="/">
+          <h3 className="text-uppercase">ЛЕКТОРИЙ</h3>
+          <p className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
+          </Link>
+        
         </div>
         
         <div className='d-flex mt-10 flex-row justify-around flex-wrap'>
