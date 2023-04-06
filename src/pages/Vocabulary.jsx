@@ -19,7 +19,6 @@ function Vocabulary({
       <Card
         key={index}
         onFavorite={(obj) => onAddToFavorite(obj)}
-        // onPlus={(obj) => onAddToCart(obj)}
         loading={isLoading}
         {...item}
       />
@@ -29,8 +28,8 @@ function Vocabulary({
   return (
     <div className="content p-40">
       <div className="d-flex align-center justify-between mb-40">
-        <h1>{String(searchValue).length === 0 ? `Все карточки`: `Поиск по запросу: "${searchValue}"`}</h1>
-        <div className="search-block d-flex">
+        <h1>{String(searchValue).length === 0 ? `Словарь Лектория`: `Поиск по запросу: "${searchValue}"`}</h1>
+        {/* <div className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {String(searchValue).length !== 0 && <img
               onClick={() => setSearchValue('')}
@@ -40,9 +39,9 @@ function Vocabulary({
             />  
           }
           <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
-        </div>
+        </div> */}
       </div>
-      <div className="d-flex flex-wrap">{renderItems()}</div>
+      <div className="d-flex justify-center flex-wrap mb-60">{renderItems()}</div>
     </div>
   );
 }
