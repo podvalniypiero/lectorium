@@ -19,7 +19,7 @@ function Main() {
     <div className='d-flex flex-column align-center'>
       <div className={styles.mainIntro}>
       <img className= 'mt-20' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
-      <p className=' p-30'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
+      <p className=' p-30 h3'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
       <br/>ВАШ НАВИГАТОР В МИРЕ ЛИТЕРАТУРЫ
       <br/>ИНСТРУМЕНТ ПОЗНАНИЯ ИСКУССТВА СЛОВА
       <br/> И САМОГО СЕБЯ
