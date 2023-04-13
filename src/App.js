@@ -8,7 +8,7 @@ import Main from './pages/Main';
 import Person from './pages/Person';
 import Favorites from './pages/Favorites';
 import Vocabulary from './pages/Vocabulary';
-import Games from './pages/Games/Games';
+import Games from './pages/Games';
 
 
 import AppContext from './context';

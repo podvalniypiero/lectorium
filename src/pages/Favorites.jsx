@@ -8,7 +8,7 @@ function Favorites() {
 
   return (
     <div className="content">
-      <div className="d-flex  flex-column mb-40">
+      <div className="d-flex flex-column mb-40">
         <h1 className='ml-40 mt-40'>Избранное</h1>
         <p className={styles.h3}>В данном разделе Вы можете просматривать и редактировать карточки, добавленные в Избранное</p>
       </div>
