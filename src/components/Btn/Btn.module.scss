@@ -1,9 +1,9 @@
 @import '/src/index.scss';
 
 button{
-    padding: 20px;
+    padding: 15px;
     border-radius: 25px;
-    margin: 30px;
+    margin: 5px;
     background: $logo-theme-back;
     cursor: pointer;
     &:hover{
@@ -11,4 +11,5 @@ button{
        }
     color: black;
     font-style: none;
+    text-transform: uppercase;
 }

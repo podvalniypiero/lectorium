@@ -11,15 +11,13 @@ body{
     display: flex;
     align-items: center;
     cursor: default;
-    button {
-        cursor: pointer;
-        border-radius: 20px;
+    .btn {
+       
     }
-    button:hover{
-        background: lightgoldenrodyellow;
-    }
+
     nav{
         display: flex;
        
     }
+
 }
