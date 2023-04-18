@@ -38,11 +38,11 @@ function CardDef({
           </ContentLoader>
         ) : (
           <>
-            <h5>{name}</h5>
+            <h5><b>{name}</b></h5>
             <div className="d-flex justify-between align-center">
               <div className="d-flex flex-column">
                 <span>Определение:</span>
-                <b>{data}</b>
+                <p>{data}</p>
               </div>
             </div>
           </>
