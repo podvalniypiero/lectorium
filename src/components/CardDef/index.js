@@ -11,7 +11,7 @@ function CardDef({
     // favorited = false,
     loading = false,
   }) {
-
+    const obj = { id, parentId: id, name, data };
     // const [isFavorite, setIsFavorite] = React.useState(favorited);
     // const obj = { id, parentId: id, name, data, imageURL };
   
@@ -26,16 +26,15 @@ function CardDef({
         {loading ? (
           <ContentLoader
             speed={2}
-            width={155}
+            width={170}
             height={250}
-            viewBox="0 0 155 265"
+            viewBox="0 0 170 250"
             backgroundColor="#f3f3f3"
             foregroundColor="#ecebeb">
-            <rect x="1" y="0" rx="10" ry="10" width="155" height="155" />
-            <rect x="0" y="167" rx="5" ry="5" width="155" height="15" />
-            <rect x="0" y="187" rx="5" ry="5" width="100" height="15" />
-            <rect x="1" y="234" rx="5" ry="5" width="80" height="25" />
-            <rect x="124" y="230" rx="10" ry="10" width="32" height="32" />
+            <rect x="0" y="12" rx="12" ry="12" width="165" height="28" /> 
+            <rect x="55" y="283" rx="3" ry="3" width="178" height="6" /> 
+            <rect x="553" y="316" rx="3" ry="3" width="56" height="15" /> 
+            <rect x="0" y="51" rx="12" ry="12" width="165" height="200" />
           </ContentLoader>
         ) : (
           <>

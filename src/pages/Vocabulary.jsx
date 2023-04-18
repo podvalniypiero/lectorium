@@ -20,7 +20,7 @@ function Vocabulary({
   return (
     <div className="content">
       <div className="d-flex flex-column mb-40">
-        <h1 className='ml-40 mt-40'>Избранное</h1>
+        <h1 className='ml-40 mt-40'>Литературный словарь</h1>
         <p className={styles.h3}>Карточки в данном разделе помогут вам в изучении литературы и повышении эрудиции</p>
       </div>
       

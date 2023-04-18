@@ -38,7 +38,7 @@ function App() {
     setFavorites(favoritesResponse.data);
     // console.log (itemsResponse.data);
     // console.log (favoritesResponse.data);
-    // console.log(vocabularyResponse.data);
+     console.log(vocabularyResponse.data);
     setItems(itemsResponse.data);
     setVocabulary(vocabularyResponse.data);
     }
@@ -101,17 +101,13 @@ function App() {
 
         <Route path="/vocabulary" element = {
           <Vocabulary
-          items={items}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          onChangeSearchInput={onChangeSearchInput}
-          onAddToFavorite={onAddToFavorite}
+          items={vocabulary}
           isLoading={isLoading}
         />
         }/>
   
         <Route path='/favorites' element = {
-            <Favorites items={favorites} onAddToFavorite={onAddToFavorite}/>
+            <Favorites items={favorites} isLoading={isLoading} onAddToFavorite={onAddToFavorite}/>
         }/>
 
         <Route path="/games" element = {
