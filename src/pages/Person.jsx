@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import styles from './Pages.module.scss'; 
-import { InView } from 'react-intersection-observer';
+// import { InView } from 'react-intersection-observer';
 
 function Person({
   items,

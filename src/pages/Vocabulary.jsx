@@ -1,24 +1,16 @@
 import React from 'react';
-import Card from '../components/Card';
+import CardDef from '../components/CardDef';
 import styles from './Pages.module.scss'; 
 
 function Vocabulary({
   items,
-  searchValue,
-  setSearchValue,
-  onChangeSearchInput,
-  onAddToFavorite,
-  // onAddToCart,
   isLoading,
 }) {
-  const renderItems = () => {
-    const filtredItems = items.filter((item) =>
-      (String(item.title)).toLowerCase().includes(String(searchValue).toLowerCase()),
-    );
-    return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
-      <Card
+  const renderDefs = () => {
+
+    return (isLoading ? [...Array(8)] : items).map((item, index) => (
+      <CardDef
         key={index}
-        onFavorite={(obj) => onAddToFavorite(obj)}
         loading={isLoading}
         {...item}
       />
@@ -26,22 +18,13 @@ function Vocabulary({
   };
 
   return (
-    <div className="content p-40">
-      <div className="d-flex align-center justify-between mb-40">
-        <h1>Словарь Лектория</h1>
-        {/* <div className="search-block d-flex">
-          <img src="img/search.svg" alt="Search" />
-          {String(searchValue).length !== 0 && <img
-              onClick={() => setSearchValue('')}
-              className="clear cu-p"
-              src="img/btn-remove.svg"
-              alt="Clear"
-            />  
-          }
-          <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
-        </div> */}
+    <div className="content">
+      <div className="d-flex flex-column mb-40">
+        <h1 className='ml-40 mt-40'>Избранное</h1>
+        <p className={styles.h3}>Карточки в данном разделе помогут вам в изучении литературы и повышении эрудиции</p>
       </div>
-      <div className="d-flex justify-center flex-wrap mb-60">{renderItems()}</div>
+      
+      <div className="d-flex justify-center flex-wrap mb-60">{renderDefs()}</div>
     </div>
   );
 }
