@@ -102,6 +102,9 @@ function App() {
         <Route path="/vocabulary" element = {
           <Vocabulary
           items={vocabulary}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          onChangeSearchInput={onChangeSearchInput}
           isLoading={isLoading}
         />
         }/>
