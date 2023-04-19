@@ -44,9 +44,9 @@ function Main() {
       
       
       <div className={styles.sliderMainContainer}>
-        <img className={styles.previous} src='\img\backArrow.svg' alt='Назад'/>
-        <img className='p-25' src='\img\slide.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
-        <img className={styles.next} src='\img\nextArrow.svg' alt='Вперед'/>
+        
+        <img className='p-25' src='\img\slider\slider0.jpg' alt='Литературный слайдер. Маяковский.' width={400}/>
+        
       </div>
 
       <div className='d-flex flex-column align-center'>

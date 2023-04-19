@@ -10,7 +10,6 @@ import Favorites from './pages/Favorites';
 import Vocabulary from './pages/Vocabulary';
 import Games from './pages/Games';
 
-
 import AppContext from './context';
 
 
@@ -24,9 +23,7 @@ function App() {
 
   const [isLoading, setIsLoading] = React.useState(true);
 
-
-  React.useEffect ( () => {  // главную функцию useEffect нельзя делать async
-
+  React.useEffect ( () => {  
     async function fetchData () {
       setIsLoading(true);
     const favoritesResponse = await axios.get(`http://localhost:2023/favorites`);
@@ -34,16 +31,14 @@ function App() {
     const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
 
     setIsLoading(false);
-
-    setFavorites(favoritesResponse.data);
     // console.log (itemsResponse.data);
     // console.log (favoritesResponse.data);
-     console.log(vocabularyResponse.data);
+    //console.log(vocabularyResponse.data);
+    setFavorites(favoritesResponse.data);
     setItems(itemsResponse.data);
     setVocabulary(vocabularyResponse.data);
     }
       fetchData();
-
   },[]);
 
   const onChangeSearchInput = (event) => {

@@ -14,7 +14,7 @@ function Favorites() {
       </div>
 
       <div className="d-flex justify-center flex-wrap mb-60">
-        {/* {console.log(Array(favorites))} */}
+        
         {/* {  Array(favorites).length === 1  ? 
         
          <div className={styles.noFavorites}> 
