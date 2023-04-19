@@ -23,11 +23,11 @@ function Vocabulary({
   };
 
   return (
-    <div className="content mb-80 ">
-       <div className="d-flex flex-column ml-40">
-        <h1 className='mt-40 mb-40'>Литературный словарь</h1>
-        <p className='opacity-5 text-uppercase mb-40'>Карточки в данном разделе помогут вам в изучении литературы и повышении эрудиции</p>
-      
+    <div className="content p-40 ">
+       <div className="d-flex flex-column">
+        <h1 className='mb-20 '>Литературный словарь</h1>
+        <p className='opacity-5 text-uppercase'>Карточки в данном разделе помогут вам в изучении литературы и повышении эрудиции</p>
+      <div className='mt-20'>
       <div className={styles.searchBox}>
         <h1 className={styles.searchInput}>
           {searchValue.toString().length === 0 ? `Все карточки`: `Поиск по запросу: "${searchValue}"`}
@@ -43,6 +43,7 @@ function Vocabulary({
           }
           <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..." />
           </div>
+          </div>
         </div>
 
       </div>
@@ -51,7 +52,7 @@ function Vocabulary({
         <p className={styles.h3}>Карточки в данном разделе помогут вам в изучении литературы и повышении эрудиции</p>
       </div> */}
       
-      <div className="d-flex justify-center flex-wrap ">{renderDefs()}</div>
+      <div className="d-flex justify-center flex-wrap mb-60">{renderDefs()}</div>
     </div>
   );
 }
