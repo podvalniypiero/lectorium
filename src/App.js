@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from './components/Header';
+import Footer from './components/Footer';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 
@@ -113,6 +114,7 @@ function App() {
         }>
         </Route>
       </Routes>
+      <Footer/>
     </div>
     </AppContext.Provider>
   );
