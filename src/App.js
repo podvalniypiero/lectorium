@@ -27,9 +27,9 @@ function App() {
   React.useEffect ( () => {  
     async function fetchData () {
       setIsLoading(true);
-    const favoritesResponse = await axios.get(`https://lectorium-eta.vercel.app/favorites`);
-    const itemsResponse =  await axios.get(`https://lectorium-eta.vercel.app/person`);
-    const vocabularyResponse = await axios.get(`https://lectorium-eta.vercel.app/vocabulary`);
+    const favoritesResponse = await axios.get(`https://server-lectorium.vercel.app/favorites`);
+    const itemsResponse =  await axios.get(`https://server-lectorium.vercel.app/person`);
+    const vocabularyResponse = await axios.get(`https://server-lectorium.vercel.app/vocabulary`);
 
     setIsLoading(false);
     setFavorites(favoritesResponse.data);
@@ -46,11 +46,11 @@ function App() {
   const onAddToFavorite = async (obj) => {
     try{
     if (favorites.find ((favObj) => favObj.id === obj.id )) {
-      axios.delete(`https://lectorium-eta.vercel.app/favorites/${obj.id}`); 
+      axios.delete(`https://server-lectorium.vercel.app/favorites/${obj.id}`); 
       setFavorites((prev) => prev.filter((item) => item.id !== obj.id));
     }
     else {
-    const {data} = await axios.post(`https://lectorium-eta.vercel.app/favorites`, obj); 
+    const {data} = await axios.post(`https://server-lectorium.vercel.app/favorites`, obj); 
     setFavorites(prev => [...prev, data]);
     }
   }
