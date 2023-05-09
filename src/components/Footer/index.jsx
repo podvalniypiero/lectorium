@@ -19,7 +19,7 @@ function Footer() {
             </Link>
           </li>
       </ul>
-            <p className='opacity-5 d-flex justify-center'> © 2023 разработано студентом МАИ Каршиной М.А.</p> 
+            <p className=' author opacity-5 d-flex justify-center'> © 2023 разработано студентом МАИ Каршиной М.А.</p> 
   </footer>
   </div>
 
