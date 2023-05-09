@@ -26,7 +26,7 @@ function Person({
   };
 
   return (
-    <div className="content p-40">
+    <div className="content p-40 justify-center">
       <h1 className='mb-20 '>Коллекция авторов</h1>
       <div className={styles.searchBox}>
         <h1 className={styles.searchInput}>

@@ -2,21 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import AppContext from '../context';
 import styles from './Pages.module.scss'; 
 import Btn from '../components/Btn';
 
-
-
-
 function Main() {
-  
   const [isLoading, setIsLoading] = React.useState(true);
 
   return (
     
     <div className={styles.containerMain}>
-
     <div className='d-flex flex-column align-center'>
       <div className={styles.mainIntro}>
       <img className= 'mt-20' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>

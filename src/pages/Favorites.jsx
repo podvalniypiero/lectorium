@@ -4,6 +4,7 @@ import Card from '../components/Card';
 import AppContext from '../context';
 import styles from './Pages.module.scss'; 
 
+
 function Favorites() {
   const { favorites, onAddToFavorite } = React.useContext(AppContext);
 

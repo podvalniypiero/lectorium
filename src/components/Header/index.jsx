@@ -22,22 +22,18 @@ function Header(props) {
         <div className='d-flex mt-10 flex-row justify-around flex-wrap'>
           <div className=''>
           <Link to="/">
-            {/* <button className="mr-30 p-15 m-5">О НАС</button> */}
             <Btn className={styles.btn}  p={'о нас'} />
           </Link>
 
           <Link to="/authors">
-            {/* <button className="mr-30 p-15 m-5">НАША КОЛЛЕКЦИЯ АВТОРОВ</button> */}
             <Btn className={styles.btn}  p={'наша коллекция авторов'} />
           </Link>
 
           <Link to="/vocabulary">
-            {/* <button className="mr-30 p-15 m-5">ЛИТЕРАТУРНЫЙ СЛОВАРЬ</button> */}
             <Btn className={styles.btn}  p={'литературный словарь'} />
           </Link>
                  
           <Link to="/games">
-             {/* <button className="mr-30 p-15 m-5">РАЗДЕЛ ИНТЕРАКТИВА</button> */}
              <Btn className={styles.btn}  p={'раздел интерактива'} />
           </Link>
           
