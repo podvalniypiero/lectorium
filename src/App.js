@@ -11,9 +11,6 @@ import Favorites from './pages/Favorites';
 import Vocabulary from './pages/Vocabulary';
 import Games from './pages/Games';
 
-import AppContext from './context';
-
-
 
 function App() {
   
