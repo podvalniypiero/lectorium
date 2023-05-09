@@ -1,7 +1,6 @@
 import styles from './Card.module.scss';
 import ContentLoader from 'react-content-loader';
 import React from 'react';
-import AppContext from '../../context';
 import { InView, useInView } from 'react-intersection-observer';
 
 function Card({
@@ -13,7 +12,6 @@ function Card({
   favorited = false,
   loading = false,
 }) {
-  // const { isItemAdded } = React.useContext(AppContext);
   const [isFavorite, setIsFavorite] = React.useState(favorited);
   const obj = { id, parentId: id, name, data, imageURL };
 
