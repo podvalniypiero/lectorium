@@ -10,7 +10,7 @@ function Vocabulary({
   isLoading,
 }) {
     const renderDefs = () => {
-      const filtredItems = items.filter((item) =>
+      const filtredItems = (Array.from(items)).filter((item) =>
         (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
       );
       return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
