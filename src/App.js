@@ -27,14 +27,11 @@ function App() {
   React.useEffect ( () => {  
     async function fetchData () {
       setIsLoading(true);
-    const favoritesResponse = await axios.get(`http://localhost:2023/favorites`);
-    const itemsResponse =  await axios.get(`http://localhost:2023/person`);
-    const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
+    const favoritesResponse = await axios.get(`https://lectorium-eta.vercel.app/favorites`);
+    const itemsResponse =  await axios.get(`https://lectorium-eta.vercel.app/person`);
+    const vocabularyResponse = await axios.get(`https://lectorium-eta.vercel.app/vocabulary`);
 
     setIsLoading(false);
-    // console.log (itemsResponse.data);
-    // console.log (favoritesResponse.data);
-    //console.log(vocabularyResponse.data);
     setFavorites(favoritesResponse.data);
     setItems(itemsResponse.data);
     setVocabulary(vocabularyResponse.data);
@@ -49,12 +46,11 @@ function App() {
   const onAddToFavorite = async (obj) => {
     try{
     if (favorites.find ((favObj) => favObj.id === obj.id )) {
-      // if (favorites.find((favObj) => Number(favObj.id) === Number(obj.id)))
-      axios.delete(`http://localhost:2023/favorites/${obj.id}`); 
+      axios.delete(`https://lectorium-eta.vercel.app/favorites/${obj.id}`); 
       setFavorites((prev) => prev.filter((item) => item.id !== obj.id));
     }
     else {
-    const {data} = await axios.post(`http://localhost:2023/favorites`, obj); 
+    const {data} = await axios.post(`https://lectorium-eta.vercel.app/favorites`, obj); 
     setFavorites(prev => [...prev, data]);
     }
   }
