@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 function Footer() {
 
   return (
-  <div className='content mt-40'>
-    <hr className='opacity-2' noshade size="1"  width="100%"/>
+  <div className='content mt-40 '>
+    <hr className='opacity-2' size="1"  width="100%"/>
   <footer className="p-40">
-      <ul className='d-flex justify-between'>
-          <li className='d-flex flex-row align-center'>
+      <ul className=' footerList d-flex justify-between flex-wrap'>
+          <li className='footerListLogo d-flex flex-row align-center flex-wrap'>
                   <h3 className="text-uppercase ">ЛЕКТОРИЙ</h3>
                   <p className='opacity-5 p-20'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>    
           </li>  
