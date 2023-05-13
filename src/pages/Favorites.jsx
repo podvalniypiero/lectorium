@@ -3,11 +3,25 @@ import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import AppContext from '../context';
 import styles from './Pages.module.scss'; 
+import {gsap} from 'gsap';
 
 
 function Favorites() {
   const { favorites, onAddToFavorite } = React.useContext(AppContext);
+  let inter = document.getElementById('interDark'); 
 
+  gsap.from(inter, { 
+    opacity: 0.2,
+    duration: 3,
+    repeat: -1
+  }); 
+  gsap.to (inter, { 
+    opacity: 1,
+    delay: 4,
+    duration: 3,
+    repeat: -1,
+
+  });
   return (
     <div className="content">
       <div className="d-flex flex-column mb-40">
@@ -28,7 +42,7 @@ function Favorites() {
             <div className={styles.noFavorites}> 
               <div className={styles.containerDark}>
                 <h3 className='p-20'>ВЫ ЕЩЕ НЕ ДОБАВИЛИ НИЧЕГО В <span>ИЗБРАННОЕ</span></h3>
-                <img src='\img\noFavorites.jpg' alt='Вы еще не добавили ничего в Избранное' className='mb-20' width={450}/>
+                <img id='interDark' src='\img\noFavorites.jpg' alt='Вы еще не добавили ничего в Избранное' className='mb-20' width={450}/>
                 
                 <Link to="/vocabulary">
                   <h3>ПЕРЕЙТИ В СЛОВАРЬ <span>ЛЕКТОРИЯ</span></h3>

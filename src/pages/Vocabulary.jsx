@@ -1,7 +1,8 @@
 import React from 'react';
 import CardDef from '../components/CardDef';
 import styles from './Pages.module.scss'; 
-import {gsap} from 'gsap';
+
+import Swal from 'sweetalert2';
 
 function Vocabulary({
   items,
@@ -10,32 +11,19 @@ function Vocabulary({
   onChangeSearchInput,
   isLoading,
 }) {
-  let inter = document.getElementById('searchBlock'); 
 
-  gsap.from(inter, { 
-    scale: 0.5,
-    opacity: 0,
-    delay: 1,
-    duration: 1,
-  }); 
-  gsap.to (inter, { 
-    scale: 1,
-    opacity: 1,
-    delay: 2,
-    duration: 1,
-  }); 
     const renderDefs = () => {
       const filtredItems = items.filter((item) =>
         (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
       );
-      return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
+      return  ((isLoading ? [...Array(8)] :  (filtredItems.length >0) ? (filtredItems).map((item, index) => (
         <CardDef
           key={index}
           loading={isLoading}
           {...item}
         />
-      ));
-  };
+      )): <h3>По Вашему запросу ничего не было найдено </h3>));
+    };
 
   return (
     <div className="content p-40 ">
@@ -63,7 +51,7 @@ function Vocabulary({
 
       </div>
       
-      <div className="d-flex justify-center flex-wrap mb-60">{renderDefs()}</div>
+      <div className="d-flex justify-center flex-wrap mb-60">{ renderDefs() }</div>
     </div>
   );
 }

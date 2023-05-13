@@ -12,35 +12,20 @@ function Person({
   onAddToFavorite,
   isLoading,
 }) {
-  let inter = document.getElementById('searchBlock'); 
-
-  gsap.from(inter, { 
-    scale: 0.5,
-    opacity: 0,
-    delay: 1,
-    duration: 1,
-  }); 
-  gsap.to (inter, { 
-    scale: 1,
-    opacity: 1,
-    delay: 2,
-    duration: 1,
-  }); 
-
-
 
   const renderItems = () => {
     const filtredItems = items.filter((item) =>
       (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
     );
-    return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
+ 
+    return ((isLoading ? [...Array(8)] :  (filtredItems.length >0) ? (filtredItems).map((item, index) => (
       <Card
         key={index}
         onFavorite={(obj) => onAddToFavorite(obj)}
         loading={isLoading}
         {...item}
       />
-    ));
+    )): <h3>По Вашему запросу ничего не было найдено </h3>));
   };
 
   return (
