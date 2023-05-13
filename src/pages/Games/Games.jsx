@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import styles from './Pages.module.scss'; 
+import styles from '../Pages.module.scss'; 
+import './Games.module.scss';
+
 
 
 function Games() {
- 
+
   return (
     <div className="content">
       <div className="d-flex flex-column mb-40 ">
@@ -15,9 +17,8 @@ function Games() {
               <img className= 'mb-40' src='\img\inter.jpg' alt='Поколения Лектория' width={450}/>
           </div>
           <div className={styles.games}>
-
-
-          </div>
+            
+            </div>
       </div>
         
       

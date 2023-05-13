@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 import styles from './Pages.module.scss'; 
 import Btn from '../components/Btn';
 
 function Main() {
-  const [isLoading, setIsLoading] = React.useState(true);
-
   return (
     
     <div className={styles.containerMain}>

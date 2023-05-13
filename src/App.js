@@ -1,19 +1,17 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
+import axios from 'axios';
+import { gsap } from 'gsap';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { useState,useEffect } from 'react';
-import axios from 'axios';
-
 import Main from './pages/Main';
 import Person from './pages/Person';
 import Favorites from './pages/Favorites';
 import Vocabulary from './pages/Vocabulary';
-import Games from './pages/Games';
+import Games from './pages/Games/Games';
 
 import AppContext from './context';
-
-
 
 function App() {
   
@@ -32,9 +30,6 @@ function App() {
     const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
 
     setIsLoading(false);
-    // console.log (itemsResponse.data);
-    // console.log (favoritesResponse.data);
-    //console.log(vocabularyResponse.data);
     setFavorites(favoritesResponse.data);
     setItems(itemsResponse.data);
     setVocabulary(vocabularyResponse.data);
