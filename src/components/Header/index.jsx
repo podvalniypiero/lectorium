@@ -2,9 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import Btn from '../Btn';
+import {gsap} from 'gsap';
 
 function Header(props) {
 
+  let inter = document.getElementById('interLogo'); 
+
+  gsap.from(inter, { 
+    opacity: 0.1,
+    duration: 2,
+    repeat: - 1
+  }); 
+  gsap.to (inter, { 
+    opacity: 0.8,
+    delay: 2,
+    duration: 2,
+    repeat: -1,
+
+  });
   return (
   <header className="d-flex justify-between align-center p-40">
         <div className={styles.headerTop}>
@@ -14,7 +29,7 @@ function Header(props) {
         <div className='cu-p'>
           <Link to="/">
           <h3 className="text-uppercase">ЛЕКТОРИЙ</h3>
-          <p className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
+          <p id='interLogo'className='opacity-5'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
           </Link>
         
         </div>

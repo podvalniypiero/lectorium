@@ -1,7 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {gsap} from 'gsap';
 
 function Footer() {
+  
+  let inter = document.getElementById('interLink'); 
+
+  gsap.from(inter, { 
+    opacity: 0.1,
+    duration: 3,
+    repeat: -1
+  }); 
+  gsap.to (inter, { 
+    opacity: 1,
+    delay: 3,
+    duration: 3,
+    repeat: -1,
+  });
 
   return (
   <div className='content mt-40 '>
@@ -12,7 +27,7 @@ function Footer() {
                   <h3 className="text-uppercase ">ЛЕКТОРИЙ</h3>
                   <p className='opacity-5 p-20'> ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>    
           </li>  
-          <li className='d-flex  align-center'>
+          <li id='interLink' className='d-flex  align-center'>
             <Link to='https://telegram.me/valentnost0'>
               <button className="mr-30 p-15 m-5">связаться с нами <img className='ml-5 mr-0 opacity-5' width={18} height={16} src="img/tg.svg" alt="Telegram" />
               </button>   

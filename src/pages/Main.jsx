@@ -38,14 +38,15 @@ function Main() {
 
   gsap.from(interBtn, { 
     opacity: 0.8,
-    duration: 1,
+    duration: 3,
+    repeat: -1,
     scale: 0.8
   }); 
   gsap.to (interBtn, { 
     delay: 1,
-    duration: 1,
-    yoyo: true, 
-    scale: 1.5
+    duration: 3,
+    repeat: -1,
+    scale: 1.4
   });
 
   return (
@@ -172,8 +173,8 @@ function Main() {
       <p className=''>ЛЕКТОРИЙ — ЭТО НОВЫЙ ВЗГЛЯД НА ЛИТЕРАТУРУ</p>
       <p className=''>ВАШ ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
       <Link to="/authors">
-        <div className='d-flex justify-center'>
-          <Btn id='interBtn' p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
+        <div id='interBtn' className='d-flex justify-center'>
+          <Btn  p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
         </div>
       </Link>
         </div>
