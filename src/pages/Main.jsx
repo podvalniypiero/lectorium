@@ -3,15 +3,58 @@ import { Link } from 'react-router-dom';
 
 import styles from './Pages.module.scss'; 
 import Btn from '../components/Btn';
+import {gsap} from 'gsap';
 
 function Main() {
+  let inter = document.getElementById('photo'); 
+
+  gsap.from(inter, { 
+    scale: 0.5,
+    opacity: 0.1,
+    delay: 0.5,
+    duration: 1,
+  }); 
+  gsap.to (inter, { 
+    scale: 1,
+    opacity: 1,
+    delay: 2,
+    duration: 1,
+  }); 
+
+  let interText = document.getElementById('text'); 
+
+  gsap.from(interText, { 
+    opacity: 0,
+    delay: 3,
+    duration: 2,
+  }); 
+  gsap.to (interText, { 
+    opacity: 1,
+    delay: 3,
+    duration: 2,
+  });
+
+  let interBtn = document.getElementById('interBtn'); 
+
+  gsap.from(interBtn, { 
+    opacity: 0.8,
+    duration: 1,
+    scale: 0.8
+  }); 
+  gsap.to (interBtn, { 
+    delay: 1,
+    duration: 1,
+    yoyo: true, 
+    scale: 1.5
+  });
+
   return (
     
     <div className={styles.containerMain}>
     <div className='d-flex flex-column align-center'>
       <div className={styles.mainIntro}>
-      <img className= 'mt-20' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
-      <p className=' p-30 h3'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
+      <img id='photo' className= 'mt-20' src='\img\mainIntro.svg' alt='Поколения Лектория' width={350}/>
+      <p id='text' className=' p-30 h3'>ЛЕКТОРИЙ  — ЭТО УНИКАЛЬНЫЙ ПРОЕКТ
       <br/>ВАШ НАВИГАТОР В МИРЕ ЛИТЕРАТУРЫ
       <br/>ИНСТРУМЕНТ ПОЗНАНИЯ ИСКУССТВА СЛОВА
       <br/> И САМОГО СЕБЯ
@@ -130,7 +173,7 @@ function Main() {
       <p className=''>ВАШ ПРОВОДНИК В МИР ИСКУССТВА СЛОВА</p>
       <Link to="/authors">
         <div className='d-flex justify-center'>
-          <Btn p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
+          <Btn id='interBtn' p={'ПРОДОЛЖИТЬ С ЛЕКТОРИЕМ'}/>
         </div>
       </Link>
         </div>

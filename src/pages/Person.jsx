@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import styles from './Pages.module.scss'; 
+import {gsap} from 'gsap';
 // import { InView } from 'react-intersection-observer';
 
 function Person({
@@ -11,8 +12,25 @@ function Person({
   onAddToFavorite,
   isLoading,
 }) {
+  let inter = document.getElementById('searchBlock'); 
+
+  gsap.from(inter, { 
+    scale: 0.5,
+    opacity: 0,
+    delay: 1,
+    duration: 1,
+  }); 
+  gsap.to (inter, { 
+    scale: 1,
+    opacity: 1,
+    delay: 2,
+    duration: 1,
+  }); 
+
+
+
   const renderItems = () => {
-    const filtredItems = (items.toArray()).filter((item) =>
+    const filtredItems = items.filter((item) =>
       (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
     );
     return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
@@ -32,7 +50,7 @@ function Person({
         <h1 className={styles.searchInput}>
           {searchValue.toString().length === 0 ? `Все авторы`: `Поиск по запросу: "${searchValue}"`}
         </h1>
-        <div className="search-block d-flex">
+        <div id='searchBlock' className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {searchValue.toString().length !== 0 && <img
               onClick={() => setSearchValue('')}

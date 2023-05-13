@@ -1,6 +1,7 @@
 import React from 'react';
 import CardDef from '../components/CardDef';
 import styles from './Pages.module.scss'; 
+import {gsap} from 'gsap';
 
 function Vocabulary({
   items,
@@ -9,6 +10,20 @@ function Vocabulary({
   onChangeSearchInput,
   isLoading,
 }) {
+  let inter = document.getElementById('searchBlock'); 
+
+  gsap.from(inter, { 
+    scale: 0.5,
+    opacity: 0,
+    delay: 1,
+    duration: 1,
+  }); 
+  gsap.to (inter, { 
+    scale: 1,
+    opacity: 1,
+    delay: 2,
+    duration: 1,
+  }); 
     const renderDefs = () => {
       const filtredItems = items.filter((item) =>
         (String(item.name||item.data)).toLowerCase().includes((String(searchValue)).toLowerCase()),
@@ -32,7 +47,7 @@ function Vocabulary({
         <h1 className={styles.searchInput}>
           {searchValue.toString().length === 0 ? `Все карточки`: `Поиск по запросу: "${searchValue}"`}
         </h1>
-        <div className="search-block d-flex">
+        <div id='searchBlock' className="search-block d-flex">
           <img src="img/search.svg" alt="Search" />
           {searchValue.toString().length !== 0 && <img
               onClick={() => setSearchValue('')}
