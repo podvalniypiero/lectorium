@@ -11,7 +11,7 @@ function Header(props) {
   gsap.from(inter, { 
     opacity: 0.1,
     duration: 2,
-    repeat: - 1
+    repeat: -1
   }); 
   gsap.to (inter, { 
     opacity: 0.8,
@@ -20,6 +20,7 @@ function Header(props) {
     repeat: -1,
 
   });
+  
   return (
   <header className="d-flex justify-between align-center p-40">
         <div className={styles.headerTop}>

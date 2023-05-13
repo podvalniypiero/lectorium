@@ -1,8 +1,7 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom'
 import axios from 'axios';
-import { gsap } from 'gsap';
-
+import Swal from 'sweetalert2';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './pages/Main';
@@ -24,15 +23,25 @@ function App() {
 
   React.useEffect ( () => {  
     async function fetchData () {
+      try{
       setIsLoading(true);
-    const favoritesResponse = await axios.get(`http://localhost:2023/favorites`);
-    const itemsResponse =  await axios.get(`http://localhost:2023/person`);
-    const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
-
-    setIsLoading(false);
-    setFavorites(favoritesResponse.data);
-    setItems(itemsResponse.data);
-    setVocabulary(vocabularyResponse.data);
+      
+      const favoritesResponse = await axios.get(`http://localhost:2023/favorites`);
+      const itemsResponse =  await axios.get(`http://localhost:2023/person`);
+      const vocabularyResponse = await axios.get(` http://localhost:2023/vocabulary`);
+      setIsLoading(false);
+      setFavorites(favoritesResponse.data);
+      setItems(itemsResponse.data);
+      setVocabulary(vocabularyResponse.data);
+      }
+      catch(error){
+        Swal.fire({
+          icon: 'error',
+          title: 'Ой...',
+          text: 'Не удалось загрузить данные! Нет связи с сервером...',
+            padding: '3em',
+        })
+      }
     }
       fetchData();
   },[]);
@@ -54,7 +63,12 @@ function App() {
     }
   }
    catch(error){
-    alert('Не удалось добавить в избранное...');
+    Swal.fire({
+      icon: 'error',
+      title: 'Ой...',
+      text: 'Не удалось добавить в Избранное!',
+      
+    })
    }
   
   };
